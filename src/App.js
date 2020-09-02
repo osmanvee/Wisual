@@ -2,8 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import InputColorForm from './inputColor';
+import DisplayColour from './DisplayColour';
+import LoginForm from './refLogin';
 
 function App() {
+  
+  var val = '';
+  var dix = '';
   
   return (
     
@@ -12,8 +17,10 @@ function App() {
           <p><b>WIS</b>UAL</p>
       </div>
       <header className="App-header">
+     
         
-      <InputColorForm />
+      <LoginForm />
+      
        
 
 
@@ -29,7 +36,6 @@ function App() {
 
 
 
-//Form to take in user color information
 
 
 export default App;

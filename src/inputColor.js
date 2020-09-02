@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import DisplayColour from './DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
+import {hexAddModifier, hexSubtractModifier} from './modifier';
 
-class InputColorForm extends React.Component {
+class InputColorForm extends React.PureComponent {
     constructor(props) {
       super(props);
       this.state = {
@@ -16,18 +17,25 @@ class InputColorForm extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       
+      
     }
   
     handleChange(event) {    
-      this.setState({value: event.target.value}); 
+      
+      
+     
       this.setState({value2: event.target.value}); 
+    
+      this.setState({value: event.target.value}); 
+      
       
     }
+    
   
     //Figuring out what to do with the EX colour
     //Testing change again
     handleSubmit(event) {
-        let g = this.state.value2;
+        
         this.setState({isSubmitted: true}); 
      
       event.preventDefault();
@@ -37,8 +45,9 @@ class InputColorForm extends React.Component {
   
     render() {
         let div = '';
-        let newColor = rgbToHex(convertHexToRed(this.state.value2)+20,
-        convertHexToGreen(this.state.value2)+2, convertHexToBlue(this.state.value2)+2);
+        /** rgbToHex(convertHexToRed(this.state.value2)+20,
+        convertHexToGreen(this.state.value2)+2, convertHexToBlue(this.state.value2)+2);   */
+        let newColor = hexAddModifier(this.state.value2, 30, 30, 30);
       
         if (this.state.isSubmitted) {
           
@@ -46,22 +55,22 @@ class InputColorForm extends React.Component {
         <div> 
          <DisplayColour color= {newColor} />
          <h1>
-          RGB val: ( {convertHexToRed(this.state.value2)} , {convertHexToGreen(this.state.value2)}  ,{convertHexToBlue(this.state.value2)}    )
+          
           New RGB val: {HextoRGBvalues(newColor)}
           </h1>
         </div> 
         } else {
-            div = '';
+            div = <p>Select a colour first</p>;
         }
     return (
       
       <div>
       <form onSubmit={this.handleSubmit}>
-      <label for="favcolor">
-        Select a Color:</label>
+        <label for="favcolor">
+          Select a Color:
+        </label>
         <input type="color" id="favcolor" name="favcolor" value={this.state.value} onChange={this.handleChange}/>       
-        
-      <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
       </form>
         
 
