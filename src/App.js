@@ -9,7 +9,7 @@ function App() {
     
     <div className="App">
       <div className="navbar">
-          <p>C<b>O</b>LR</p>
+          <p><b>WIS</b>UAL</p>
       </div>
       <header className="App-header">
         
