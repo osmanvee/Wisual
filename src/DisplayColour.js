@@ -15,13 +15,15 @@ function DisplayColour(props) {
       border: "2px solid black",
       borderRadius: "10px",
       fontFamily: "Arial",
+      width: "70px",
+      height: "70px",
       hexValue: props.hex
     };
 
     const otherstyle = {
       color: "white",
-      fontFamily: "verdana",
-      fontSize: "20px"
+      fontFamily: "Arial, Helvetica, sans-serif",
+      fontSize: "10px"
     };
 
 
@@ -34,9 +36,8 @@ function DisplayColour(props) {
   
     return(
       <div>
-    {imageBlock} 
-    
-    </div>
+       {imageBlock} 
+      </div>
     );
   }
 

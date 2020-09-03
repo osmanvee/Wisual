@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './index.css';
 import DisplayColour from './DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
 import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from './modifier';
@@ -33,7 +34,7 @@ class LoginForm extends React.Component {
       return (
           <div>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="favcolor">Select a colour: </label>
+          <label htmlFor="favcolor"> </label>
           <input
             type="color"
             name="favcolor"

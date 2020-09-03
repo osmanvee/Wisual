@@ -1,4 +1,6 @@
 body {
+ 
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,13 +9,83 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.navBar{
-  width: 100%;
-  display: inline;
-  background: yellow;
+.logo-bar{
+  background-color: #2b2b29;
+  height: 50px;
+  display: flex;
 }
+
+.linkStyle{
+  font-weight: 400;
+  color: white;
+  align-self: center;
+  margin-left: 80px;
+  
+}
+
+
+.mainBody{
+  align-items: flex-start;
+  padding-left: 40px;
+  background: pink;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #2b2b29;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #2b2b29;
+  color: white;
+}
+
+.head {
+  font-size: 35px;
+  background: #2b2b29;
+  height: 200px;
+  font-family: Century Gothic, Verdana;
+  font-weight: 400;
+  color: white;
+
+  
+}
+
+.mainfont {
+  font-weight: 400;
+  color: white;
+  margin-left: 20px;
+  padding-top: 20px;
+  font-family: Century Gothic, Verdana;
+}
+
+.input [type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
