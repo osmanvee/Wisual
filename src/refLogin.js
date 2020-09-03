@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import DisplayColour from './DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
-import {hexAddModifier, hexSubtractModifier} from './modifier';
+import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from './modifier';
+import GenerateColors from './ColorGenerator';
+
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -24,10 +26,9 @@ class LoginForm extends React.Component {
    
     render() {
         let div = '';
-        let div2 = '';
         if(this.state.isSubmitted) {
-            div = <DisplayColour color={ this.input.value} />;
-            div2 = <DisplayColour color={ this.input.value} />;
+            //MAIN HANDLING
+           div  = <GenerateColors color={this.input.value} />
         }
       return (
           <div>
@@ -41,6 +42,7 @@ class LoginForm extends React.Component {
            <input type="submit" value="Submit" />
         </form>
         {div}
+        
         </div>
       );
     }

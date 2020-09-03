@@ -26,6 +26,19 @@ function hexAddModifier(hex, amountR, amountG, amountB) {
 
 }
 
+function generateComplementaryColor(hex) {
+    var r = convertHexToRed(hex);
+    var g = convertHexToGreen(hex);
+    var b = convertHexToBlue(hex);
+
+    var rN = Math.abs( 255 - r) ; 
+    var gN = Math.abs( 255 - g) ; 
+    var bN = Math.abs( 255 - b) ; 
+    
+    return rgbToHex(rN, gN, bN);
+
+}
+
 /**
  * 
  * @param {*} hex 
@@ -48,5 +61,6 @@ function hexSubtractModifier(hex, amountR, amountG, amountB) {
 
 export {
     hexAddModifier,
-    hexSubtractModifier
+    hexSubtractModifier,
+    generateComplementaryColor
 };
