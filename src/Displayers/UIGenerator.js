@@ -17,7 +17,8 @@ function GenerateUI(props) {
         boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
         textAlign: "center",
         backgroundColor: "#2b2b29",
-        fontSize: "10px"
+        fontSize: "10px",
+        color: "white"
     };
 
     const canvas = {
