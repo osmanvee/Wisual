@@ -19,22 +19,20 @@ code {
 
 .logo-bar{
   background-color: #2b2b29;
-  height: 50px;
   display: flex;
+  width: auto;
 }
 
 .linkStyle{
   font-weight: 400;
   color: white;
   align-self: center;
-  margin-left: 80px;
-  
 }
 
 
 .mainBody{
   align-items: flex-start;
-  padding-left: 40px;
+
   background: pink;
 }
 
@@ -63,7 +61,7 @@ code {
 .head {
   font-size: 35px;
   background: #2b2b29;
-  height: 200px;
+  width: auto;
   font-family: Century Gothic, Verdana;
   font-weight: 400;
   color: white;
@@ -74,8 +72,7 @@ code {
 .mainfont {
   font-weight: 400;
   color: white;
-  margin-left: 20px;
-  padding-top: 20px;
+  width: auto;
   font-family: Century Gothic, Verdana;
   
 }
@@ -115,13 +112,10 @@ code {
 font-size: 15px;
 display: grid;
 padding: 2px;
-margin-left: 35px;
-margin-top: 10px;
-
+width: auto;
 }
 
 .illText {
-margin-top: 5px;
 
 }
 

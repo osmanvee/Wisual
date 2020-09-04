@@ -16,8 +16,7 @@ function DisplayColour(props) {
       border: "2px solid #2b2b29",
       borderRadius: "10px",
       fontFamily: "Arial",
-      width: "70px",
-      height: "70px",
+      width: "auto",
       hexValue: props.hex,
       marginLeft: "20px"
     };
@@ -25,7 +24,7 @@ function DisplayColour(props) {
     const otherstyle = {
       color: "white",
       fontFamily: "Century Gothic, Verdana, sans-serif",
-      fontSize: "16px"
+      fontSize: "15px"
     };
 
 

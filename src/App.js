@@ -23,7 +23,7 @@ function App() {
  
 
   return (
-    <div>
+    
       
       <div className="App">
         <div className="logo-bar">
@@ -51,7 +51,7 @@ function App() {
 
         
       </div>
-    </div>
+    
   );
 }
 
