@@ -124,3 +124,13 @@ width: auto;
   display: flex;
 }
 
+.title {
+  font-weight: 700;
+  padding-top: 0.5%;
+}
+
+
+.redd{
+  font-weight: 550;
+  color: #55ddff;
+}

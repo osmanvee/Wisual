@@ -14,8 +14,8 @@ function Home() {
         <div>
             
             <div className="head">
-                
-                <img  src={banner} alt="generate color schemes on the go"/>
+                <div className="title">GENERATE COLOR SCHEMES</div>
+                <div className="redd">ON THE GO</div>
             </div>
             <div> <LoginForm /> </div>
         </div>
