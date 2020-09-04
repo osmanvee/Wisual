@@ -40,7 +40,9 @@ class LoginForm extends React.Component {
             name="favcolor"
             ref={(input) => this.input = input}
           />
-           <input type="submit" value="Submit" />
+          
+           <input className="input2" type="submit" value="Wisualize it!" />
+          
         </form>
         {div}
         

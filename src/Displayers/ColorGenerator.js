@@ -2,11 +2,14 @@ import React from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import '../index.css';
+
 import DisplayColour from './DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from '../Modifiers/conversion';
 import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from '../Modifiers/modifier';
 import { isDark } from '../Modifiers/colorTester';
 import GenerateUI from './UIGenerator';
+
+
 
 
 function GenerateColors(props) {
@@ -26,16 +29,19 @@ function GenerateColors(props) {
     
   
     return (
+        <div>
         <div className="mainItem">
         <div className="generated-colors">
-            {div}
+            <div className="colorItem">{div} </div>
             {div2}
             {div3}
         </div>
 
         <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
+        
         </div>
         
+        </div>
     );
 }
 
