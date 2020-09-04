@@ -29,19 +29,19 @@ function GenerateColors(props) {
     
   
     return (
-        <div>
-        <div className="mainItem">
-        <div className="generated-colors">
-            <div className="colorItem">{div} </div>
-            {div2}
-            {div3}
-        </div>
+        
+            <div className="mainItem">
+                <div className="generated-colors">
+                     <div className="colorItem">{div} </div>
+                    {div2}
+                    {div3}
+                </div>
 
-        <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
+                 <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
         
-        </div>
+            </div>
         
-        </div>
+       
     );
 }
 

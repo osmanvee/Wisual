@@ -18,7 +18,8 @@ function GenerateUI(props) {
         textAlign: "center",
         backgroundColor: "#2b2b29",
         fontSize: "10px",
-        color: "white"
+        color: "white",
+        marginLeft: "20px"
     };
 
     const canvas = {
