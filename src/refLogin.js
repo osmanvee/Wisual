@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './index.css';
-import DisplayColour from './DisplayColour';
-import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
-import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from './modifier';
-import GenerateColors from './ColorGenerator';
+import DisplayColour from './Displayers/DisplayColour';
+import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './Modifiers/conversion';
+import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from './Modifiers/modifier';
+import GenerateColors from './Displayers/ColorGenerator';
 
 
 class LoginForm extends React.Component {

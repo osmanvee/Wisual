@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
+import logo from '../logo.svg';
+import '../App.css';
+import '../index.css';
+import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from '../Modifiers/conversion';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
 
@@ -12,18 +13,19 @@ function DisplayColour(props) {
       color: props.color,
       backgroundColor: props.color,
       padding: "10px",
-      border: "2px solid black",
+      border: "2px solid #2b2b29",
       borderRadius: "10px",
       fontFamily: "Arial",
       width: "70px",
       height: "70px",
-      hexValue: props.hex
+      hexValue: props.hex,
+      marginLeft: "20px"
     };
 
     const otherstyle = {
       color: "white",
-      fontFamily: "Arial, Helvetica, sans-serif",
-      fontSize: "10px"
+      fontFamily: "Century Gothic, Verdana, sans-serif",
+      fontSize: "16px"
     };
 
 

@@ -3,7 +3,7 @@ import logo from './images/logo.svg';
 import './App.css';
 import './index.css';
 import InputColorForm from './inputColor';
-import DisplayColour from './DisplayColour';
+import DisplayColour from './Displayers/DisplayColour';
 import LoginForm from './refLogin';
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
     
     
       <div className="footer">
-        <p>2020 CopyRights</p>
+        
       </div>
     </div>
   );

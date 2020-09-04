@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DisplayColour from './DisplayColour';
-import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
-import {hexAddModifier, hexSubtractModifier} from './modifier';
+import DisplayColour from './Displayers/DisplayColour';
+import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './Modifiers/conversion';
+import {hexAddModifier, hexSubtractModifier} from './Modifiers/modifier';
 
 class InputColorForm extends React.PureComponent {
     constructor(props) {
