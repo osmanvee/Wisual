@@ -5,6 +5,10 @@ import './index.css';
 import InputColorForm from './inputColor';
 import DisplayColour from './Displayers/DisplayColour';
 import LoginForm from './refLogin';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import About from './components/About';
 
 function App() {
   
@@ -19,28 +23,32 @@ function App() {
  
 
   return (
-    <div className="App">
-    <div className="logo-bar">
-     <div> <img src={logo} style={logoStyle} alt="WISUAL" /> </div>
+    <div>
       
-    </div>
-    
+      <div className="App">
+        <div className="logo-bar">
+          <div> <img src={logo} style={logoStyle} alt="WISUAL" /> </div>
+        
+        </div>
       
       
-    <div className="topnav">
-       <a href="#">Home</a> 
-        <a href="#">Other</a>
-        <a href="#">Other</a>
-    </div>
+        
+        <div className="topnav">
+        <Link to="/">Home </Link>
+        <Link to="/about">About</Link>
+      
+        </div>
 
-    <div className="head">
-    <div className="mainfont"> Select a color: </div>
-    <div><LoginForm /> </div>
-    
-    </div>
-    
-    
-      <div className="footer">
+       
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+       
+        </Switch>
+          
+          <div className="footer">  
+          </div>
+
         
       </div>
     </div>
