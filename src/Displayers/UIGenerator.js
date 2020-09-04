@@ -19,7 +19,8 @@ function GenerateUI(props) {
         backgroundColor: "#2b2b29",
         fontSize: "10px",
         color: "white",
-        marginLeft: "20px"
+        marginLeft: "20px",
+        width: "200px"
     };
 
     const canvas = {

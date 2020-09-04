@@ -105,7 +105,8 @@ code {
 }
 
 .mainItem {
-  display: flex;
+  display: block;
+  align-items: center;
 }
 
 .grid1 {
