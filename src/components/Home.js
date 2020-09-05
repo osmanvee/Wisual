@@ -15,7 +15,7 @@ function Home() {
             
             <div className="head">
                 <div className="title">GENERATE COLOR SCHEMES</div>
-                <div className="redd">ON THE GO</div>
+                <div className="redd"> ON  <span id="bluee">THE </span>  <span id="green">GO</span></div>
             </div>
             <div> <LoginForm /> </div>
         </div>

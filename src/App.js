@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import favicon from './images/favicon.ico.png'
 
 function App() {
   
@@ -46,12 +47,13 @@ function App() {
        
         </Switch>
           
-          <div className="footer">  
+          <div className="footerL">
+            <div className="footerContent">2020 CopyRights - Wisual <span id="img1"> <img src={favicon}/> </span> </div>
           </div>
 
         
       </div>
-    
+      
   );
 }
 

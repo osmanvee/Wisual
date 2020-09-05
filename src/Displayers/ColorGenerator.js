@@ -12,6 +12,7 @@ import GenerateUI from './UIGenerator';
 
 
 
+
 function GenerateColors(props) {
 
     let div = '';
@@ -19,7 +20,7 @@ function GenerateColors(props) {
     let div3= '';
     
         //MAIN HANDLING
-        div = <DisplayColour color={ props.color} />;
+        div = <DisplayColour color={ props.color} /> ;
         div2 = <DisplayColour color={ generateComplementaryColor(props.color)} />;
         if (isDark(props.color, 60)) {
             div3 = <DisplayColour color={ hexAddModifier(props.color, 40, 40, 40)} />;
@@ -32,7 +33,7 @@ function GenerateColors(props) {
         
             <div className="mainItem">
                 <div className="generated-colors">
-                     <div className="colorItem">{div} </div>
+                    {div} 
                     {div2}
                     {div3}
                 </div>
