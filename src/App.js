@@ -7,10 +7,11 @@ import DisplayColour from './Displayers/DisplayColour';
 import LoginForm from './refLogin';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
 import About from './components/About';
 import favicon from './images/favicon.ico.png'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, InputGroup, FormControl, Navbar, Nav, NavDropdown, Accordion, Form, Table } from 'react-bootstrap';
+import favicon2 from './images/fav2.svg'
 function App() {
   
   var val = '';
@@ -27,18 +28,30 @@ function App() {
     
       
       <div className="App">
-        <div className="logo-bar">
-          <div> <img src={logo} style={logoStyle} alt="WISUAL" /> </div>
         
-        </div>
       
-      
+        <Navbar bg="dark" expand="lg" variant="dark">
+          <Navbar.Brand href="#home">
+          <img
+        src={logo}
+        width="100"
+        height="30"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+          />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="about">About</Nav.Link>
+            </Nav>
+            
+          </Navbar.Collapse>
+        </Navbar>
         
-        <div className="topnav">
-        <Link to="/">Home </Link>
-        <Link to="/about">About</Link>
+        
       
-        </div>
 
        
         <Switch>
@@ -47,9 +60,25 @@ function App() {
        
         </Switch>
           
-          <div className="footerL">
-            <div className="footerContent">2020 CopyRights - Wisual <span id="img1"> <img src={favicon}/> </span> </div>
-          </div>
+        <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
+          <Navbar.Brand href="#home">
+          <img
+        src={favicon2}
+        width="100"
+        height="30"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+          />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            
+          <Navbar.Text>
+          Wisual 2020 CopyRights 
+          </Navbar.Text>
+            
+          </Navbar.Collapse>
+        </Navbar>
 
         
       </div>

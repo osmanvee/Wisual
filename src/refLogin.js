@@ -6,7 +6,7 @@ import DisplayColour from './Displayers/DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './Modifiers/conversion';
 import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from './Modifiers/modifier';
 import GenerateColors from './Displayers/ColorGenerator';
-
+import { Button, InputGroup, FormControl, Navbar, Nav, NavDropdown, Accordion, Form, Table } from 'react-bootstrap';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -34,14 +34,16 @@ class LoginForm extends React.Component {
       return (
           <div>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="favcolor"> </label>
+          <label htmlFor="favcolor"> Select a color: ('#rrggbb' format if you're using a phone) </label>
           <input
             type="color"
             name="favcolor"
             ref={(input) => this.input = input}
           />
-          
-           <input className="input2" type="submit" value="Wisualize it!" />
+         <Button variant="primary" type="submit" size="sm">
+            Wisualize
+          </Button>
+           
           
         </form>
         {div}

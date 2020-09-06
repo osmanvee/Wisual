@@ -6,18 +6,33 @@ import '../App.css';
 import '../index.css';
 import LoginForm from '../refLogin';
 import banner from '../images/banner.png';
-
+import { Button, InputGroup, FormControl, Container, Col, Row, Accordion, Form, Table } from 'react-bootstrap';
 
 function Home() {
 
     return(
         <div>
-            
-            <div className="head">
-                <div className="title">GENERATE COLOR SCHEMES</div>
-                <div className="redd"> ON  <span id="bluee">THE </span>  <span id="green">GO</span></div>
+            <Container id="dark" fluid>
+            <Row>
+            <div className="title">GENERATE COLOR SCHEMES</div>
+            </Row>
+            <Row>
+            <div className="title">
+               <span id="pink"> ON </span>
+               <span id="green">THE </span> 
+                <span id="bluee">GO</span>
             </div>
-            <div> <LoginForm /> </div>
+            </Row>
+            </Container>
+            <Container fluid="md" id="white">
+                <Row>
+                    <Col>
+                        <LoginForm /> 
+                    </Col>
+                    
+                </Row>
+                </Container>
+           
         </div>
     );
 }
