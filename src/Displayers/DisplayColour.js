@@ -4,6 +4,7 @@ import '../App.css';
 import '../index.css';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from '../Modifiers/conversion';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
+import { Button, InputGroup, FormControl, Container, ProgressBar } from 'react-bootstrap';
 
 
 // Displaying a Colour Component
@@ -38,6 +39,12 @@ function DisplayColour(props) {
     return(
       <div>
        {imageBlock} 
+       <div>
+                    <ProgressBar label="R %" variant="danger" now={convertHexToRed(props.color)} />
+                    <ProgressBar  label="G %" variant="success" now={convertHexToGreen(props.color)} />
+                    <ProgressBar label="B %" variant="info" now={convertHexToBlue(props.color)} />
+                  
+                    </div>
       </div>
     );
   }

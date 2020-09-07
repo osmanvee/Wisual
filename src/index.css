@@ -140,6 +140,9 @@ width: auto;
   padding: 15px;
 }
 
+#colorInput {
+ padding-left: 12px; 
+}
 #pink {
   color: #ff5555;
 }

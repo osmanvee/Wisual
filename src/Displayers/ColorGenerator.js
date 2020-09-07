@@ -8,6 +8,7 @@ import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGB
 import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from '../Modifiers/modifier';
 import { isDark } from '../Modifiers/colorTester';
 import GenerateUI from './UIGenerator';
+import { Button, InputGroup, FormControl, Container, ProgressBar } from 'react-bootstrap';
 
 
 
@@ -39,7 +40,7 @@ function GenerateColors(props) {
                 </div>
 
                  <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
-        
+                 
             </div>
         
        
