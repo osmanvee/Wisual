@@ -140,6 +140,19 @@ width: auto;
   padding: 15px;
 }
 
+#tester{
+  padding: 2px;
+}
+#tester2{
+  background: green;
+}
+
+#inputCard {
+  
+  padding-top: 6px;
+}
+
+
 #colorInput {
  padding-left: 12px; 
 }

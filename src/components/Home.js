@@ -24,15 +24,16 @@ function Home() {
             </div>
             </Row>
             </Container>
-            <Container fluid="md" id="white">
+           
+            <Container fluid="md"  >
                 <Row>
-                    <Col>
+                    <Col >
                         <LoginForm /> 
                     </Col>
                     
                 </Row>
                 </Container>
-           
+                
         </div>
     );
 }

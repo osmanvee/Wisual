@@ -4,7 +4,9 @@ import '../App.css';
 import '../index.css';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from '../Modifiers/conversion';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
-import { Button, InputGroup, FormControl, Container, ProgressBar } from 'react-bootstrap';
+import { Button, InputGroup, FormControl, Container, ProgressBar, Row, Col } from 'react-bootstrap';
+import generateRGBbar from './rgbBars';
+import GenerateColors from './ColorGenerator';
 
 
 // Displaying a Colour Component
@@ -23,7 +25,7 @@ function DisplayColour(props) {
     };
 
     const otherstyle = {
-      color: "white",
+      color: props.color,
       fontFamily: "Century Gothic, Verdana, sans-serif",
       fontSize: "15px"
     };
@@ -31,20 +33,33 @@ function DisplayColour(props) {
 
     const imageBlock = (
       <div style={mystyle} >
-        <h1 style={otherstyle}> {props.color}  </h1>
+        <h1 style={otherstyle}> colour </h1>
       </div>
     
+    );
+
+    const bar = ( 
+    <generateRGBbar color={props.color} /> 
     );
   
     return(
       <div>
-       {imageBlock} 
-       <div>
-                    <ProgressBar label="R %" variant="danger" now={convertHexToRed(props.color)} />
-                    <ProgressBar  label="G %" variant="success" now={convertHexToGreen(props.color)} />
-                    <ProgressBar label="B %" variant="info" now={convertHexToBlue(props.color)} />
-                  
-                    </div>
+        <Container>
+          <Row>
+            <Col md="auto">{imageBlock} </Col>
+            <Col md="auto" xs lg="3" >
+              <div id="tester">  <ProgressBar  label="R %" variant="danger" now={convertHexToRed(props.color)}  /> </div>
+              <div id="tester">  <ProgressBar  label="G %" variant="success" now={convertHexToGreen(props.color)} /> </div>
+              <div id="tester"> <ProgressBar label="B %" variant="info" now={convertHexToBlue(props.color)} /> </div>
+               </Col>
+            <Col md="auto" >
+            HEX: {props.color} / {HextoRGBvalues(props.color)}
+            </Col>
+          </Row>
+        </Container>
+       {bar}
+       
+       
       </div>
     );
   }

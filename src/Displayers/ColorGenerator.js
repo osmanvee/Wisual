@@ -8,7 +8,8 @@ import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGB
 import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from '../Modifiers/modifier';
 import { isDark } from '../Modifiers/colorTester';
 import GenerateUI from './UIGenerator';
-import { Button, InputGroup, FormControl, Container, ProgressBar } from 'react-bootstrap';
+
+import { Button, InputGroup, FormControl, Container, ProgressBar, Row, Col, Card } from 'react-bootstrap';
 
 
 
@@ -31,17 +32,25 @@ function GenerateColors(props) {
     
   
     return (
-        
+        <Card body> 
+            <Container>
+                <Row>
+                    <Col id="tester">{div}</Col>                     
+                </Row>
+                <Row>
+                <Col id="tester">{div2}</Col>  
+                </Row>
+                <Row>
+                <Col id="tester">{div3}</Col>
+                </Row>
+            </Container>
             <div className="mainItem">
-                <div className="generated-colors">
-                    {div} 
-                    {div2}
-                    {div3}
-                </div>
+                
 
                  <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
                  
             </div>
+            </Card>
         
        
     );

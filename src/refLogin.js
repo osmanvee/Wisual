@@ -29,11 +29,12 @@ class LoginForm extends React.Component {
         let div = '';
         if(this.state.isSubmitted) {
             //MAIN HANDLING
-           div  = <GenerateColors color={this.input.value} />
+           div  = <GenerateColors color={this.input.value}  />
         }
       return (
-        <div>
-            <Card>             
+        <div >
+          
+            <Card >             
               <Card.Body>
                 <Card.Title>Select a color</Card.Title>
                 <Card.Text>
@@ -53,7 +54,9 @@ class LoginForm extends React.Component {
                   </form>               
               </Card.Body>
             </Card>
+            <div id="inputCard"> 
           {div}
+          </div>
         </div>
       );
     }
