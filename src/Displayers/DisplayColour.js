@@ -46,14 +46,14 @@ function DisplayColour(props) {
       <div>
         <Container>
           <Row>
-            <Col md="auto">{imageBlock} </Col>
-            <Col md="auto" xs lg="3" >
+            <Col md="auto" >{imageBlock} </Col>
+            <Col xs={5} >
               <div id="tester">  <ProgressBar  label="R %" variant="danger" now={convertHexToRed(props.color)}  /> </div>
               <div id="tester">  <ProgressBar  label="G %" variant="success" now={convertHexToGreen(props.color)} /> </div>
               <div id="tester"> <ProgressBar label="B %" variant="info" now={convertHexToBlue(props.color)} /> </div>
                </Col>
-            <Col md="auto" >
-            HEX: {props.color} / {HextoRGBvalues(props.color)}
+            <Col id="tt">
+            HEX: {props.color}  {HextoRGBvalues(props.color)}
             </Col>
           </Row>
         </Container>

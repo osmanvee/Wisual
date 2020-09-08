@@ -62,27 +62,12 @@ function App() {
        
         </Switch>
           
-        <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
-          <Navbar.Brand href="#home">
-          <img
-        src={favicon2}
-        width="100"
-        height="30"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-          />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            
-          <Navbar.Text>
-          Wisual 2020 CopyRights 
-          </Navbar.Text>
-            
-          </Navbar.Collapse>
-        </Navbar>
+       
 
-        
+        <footer>
+          <p>Wisual 2020 CopyRights</p>
+          
+        </footer>
       </div>
       
   );

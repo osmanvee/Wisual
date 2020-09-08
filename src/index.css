@@ -28,7 +28,15 @@ code {
   color: white;
   align-self: center;
 }
-
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2b2b29;
+  padding-bottom: 5px;
+  color: white;
+  text-align: center;
+}
 
 .mainBody{
   align-items: flex-start;
@@ -142,6 +150,23 @@ width: auto;
 
 #tester{
   padding: 2px;
+}
+#tt{
+  
+}
+#tester3{
+  
+}
+#homeP {
+  margin-bottom: 40px;
+ 
+}
+#tester4{
+  display: flex;
+}
+#pallete{
+  display: flex;
+  background: orange;
 }
 #tester2{
   background: green;

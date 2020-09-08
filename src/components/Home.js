@@ -11,7 +11,7 @@ import { Button, InputGroup, FormControl, Container, Col, Row, Accordion, Form, 
 function Home() {
 
     return(
-        <div>
+        <div id="homeP">
             <Container id="dark" fluid>
             <Row>
             <div className="title">GENERATE COLOR SCHEMES</div>

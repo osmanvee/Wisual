@@ -32,24 +32,27 @@ function GenerateColors(props) {
     
   
     return (
-        <Card body> 
-            <Container>
+        <Card body > 
+        <div id="tester4"> 
+            <Container id="tester3">
                 <Row>
-                    <Col id="tester">{div}</Col>                     
+                    <Col id="tester">{div}</Col> 
+                                       
                 </Row>
                 <Row>
                 <Col id="tester">{div2}</Col>  
                 </Row>
-                <Row>
+                <Row >
                 <Col id="tester">{div3}</Col>
                 </Row>
             </Container>
-            <div className="mainItem">
-                
-
-                 <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
-                 
+            <Container>
+                <Row>
+                <GenerateUI color1={props.color} color2={generateComplementaryColor(props.color)} color3={ hexAddModifier(props.color, 40, 40, 40)} />
+                </Row>
+            </Container>
             </div>
+            
             </Card>
         
        

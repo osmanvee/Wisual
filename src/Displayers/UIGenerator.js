@@ -77,8 +77,7 @@ function GenerateUI(props) {
     };
 
     return (
-        <div style={mainCanvas}>
-            Concept UI:
+        
         <div style={canvas}>
             
                 <div style={headerStyle}>
@@ -94,7 +93,7 @@ function GenerateUI(props) {
            
                 
         </div>
-        </div>
+        
     );
 }
 
