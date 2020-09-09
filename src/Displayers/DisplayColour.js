@@ -15,25 +15,24 @@ function DisplayColour(props) {
     const mystyle = {
       color: props.color,
       backgroundColor: props.color,
-      padding: "10px",
+      
       border: "2px solid #2b2b29",
       borderRadius: "10px",
       fontFamily: "Arial",
-      width: "auto",
+     
       hexValue: props.hex,
-      marginLeft: "20px"
+      
     };
 
     const otherstyle = {
       color: props.color,
-      fontFamily: "Century Gothic, Verdana, sans-serif",
-      fontSize: "15px"
+      
     };
 
 
     const imageBlock = (
       <div style={mystyle} >
-        <h1 style={otherstyle}> colour </h1>
+        <p style={otherstyle}> colour </p>
       </div>
     
     );
@@ -46,7 +45,7 @@ function DisplayColour(props) {
       <div>
         <Container>
           <Row>
-            <Col md="auto" >{imageBlock} </Col>
+            <Col sm={4} id="tester69" >{imageBlock} </Col>
             <Col xs={5} >
               <div id="tester">  <ProgressBar  label="R %" variant="danger" now={convertHexToRed(props.color)}  /> </div>
               <div id="tester">  <ProgressBar  label="G %" variant="success" now={convertHexToGreen(props.color)} /> </div>
