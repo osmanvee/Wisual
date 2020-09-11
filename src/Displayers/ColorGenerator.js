@@ -17,6 +17,16 @@ import { Button, InputGroup, FormControl, Container, ProgressBar, Row, Col, Card
 
 function GenerateColors(props) {
 
+    const eh1 = {
+       color: props.color
+    };
+    const eh2 = {
+        color: generateComplementaryColor(props.color)
+     };
+     const eh3 = {
+        color: hexSubtractModifier(props.color, 40, 40, 40)
+     };
+
     let div = '';
     let div2 = '';
     let div3= '';
@@ -59,6 +69,9 @@ function GenerateColors(props) {
                                 </Container>
                             </Col>
                 </Row>
+                <h1 style={eh1}>heading 1</h1>
+                <h2 style={eh2}>heading 2</h2>
+                <h3 style={eh2}>heading 2</h3>
             </Container>
             
 

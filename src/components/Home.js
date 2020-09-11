@@ -6,21 +6,41 @@ import '../App.css';
 import '../index.css';
 import LoginForm from '../refLogin';
 import banner from '../images/banner.png';
-import { Button, InputGroup, FormControl, Container, Col, Row, Accordion, Form, Table } from 'react-bootstrap';
-
+import { Button, InputGroup, FormControl, Container, Col, Row, Accordion, Form, Table, Media } from 'react-bootstrap';
+import wheel from '../images/wheel.svg'
 function Home() {
 
     return(
         <div id="homeP">
             <Container id="dark" fluid>
             <Row>
-            <div className="title">GENERATE COLOR SCHEMES</div>
+                <Col> 
+            <div className="title">GENERATE COLOR SCHEMES <span id="pink"> ON </span><span id="green">THE </span><span id="bluee">GO</span> </div>
+            
+               
+                
+                </Col>
+                <Col>
+                <Media>
+                    <img
+                        width={100}
+                        height={100}
+                        className="mr-3"
+                        src={wheel}
+                        alt="Generic placeholder"
+                    />
+                    <Media.Body id="">
+                        <h4 id="pink2">Color schemes for your branding</h4>
+                        <h5 id="whitee">
+                       Using color theory, multiple color palletes, UI, HTML/CSS code are generated.
+                        </h5>
+                    </Media.Body>
+                    </Media>
+                </Col>
             </Row>
             <Row>
             <div className="title">
-               <span id="pink"> ON </span>
-               <span id="green">THE </span> 
-                <span id="bluee">GO</span>
+               
             </div>
             </Row>
             </Container>

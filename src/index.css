@@ -28,7 +28,7 @@ code {
   color: white;
   align-self: center;
 }
-footer {
+.footer3 {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -161,6 +161,13 @@ width: auto;
 #tester3{
   
 }
+
+#whitee {
+  color: white;
+}
+#htmlButton {
+  margin-top: 9px;
+}
 #homeP {
   margin-bottom: 40px;
  
@@ -187,6 +194,11 @@ width: auto;
 }
 #pink {
   color: #ff5555;
+}
+
+#pink2{
+  color: #ff5555;
+  padding-top: 15px;
 }
 .redd{
   font-weight: 550;

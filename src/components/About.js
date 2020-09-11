@@ -12,7 +12,7 @@ function About() {
             <Container>
                 <h1>About Wisual</h1>
                 <p>
-                Wisual uses color theory to generate color schemes for your marketing needs!
+                Generating colour palettes using colour manupilations.
                 </p>
             </Container>
             </Jumbotron>

@@ -64,10 +64,10 @@ function App() {
           
        
 
-        <footer>
+        <footer3>
           <p>Wisual 2020 CopyRights</p>
           
-        </footer>
+        </footer3>
       </div>
       
   );
