@@ -5,7 +5,7 @@ import '../index.css';
 
 import DisplayColour from './DisplayColour';
 import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from '../Modifiers/conversion';
-import {hexAddModifier, hexSubtractModifier, generateComplementaryColor} from '../Modifiers/modifier';
+import {hexAddModifier, hexSubtractModifier, generateComplementaryColor, generateTertiaryColor} from '../Modifiers/modifier';
 import { isDark } from '../Modifiers/colorTester';
 import GenerateUI from './UIGenerator';
 
@@ -34,11 +34,7 @@ function GenerateColors(props) {
         //MAIN HANDLING
         div = <DisplayColour color={ props.color} /> ;
         div2 = <DisplayColour color={ generateComplementaryColor(props.color)} />;
-        if (isDark(props.color, 60)) {
-            div3 = <DisplayColour color={ hexAddModifier(props.color, 40, 40, 40)} />;
-        } else {
-            div3 = <DisplayColour color={ hexSubtractModifier(props.color, 40, 40, 40)} />;
-        }
+        div3 = <DisplayColour color={generateTertiaryColor(props.color)} />;
     
   
     return (
@@ -71,7 +67,7 @@ function GenerateColors(props) {
                 </Row>
                 <h1 style={eh1}>heading 1</h1>
                 <h2 style={eh2}>heading 2</h2>
-                <h3 style={eh2}>heading 2</h3>
+                <h3 style={eh3}>heading 3</h3>
             </Container>
             
 

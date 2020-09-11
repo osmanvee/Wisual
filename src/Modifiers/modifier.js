@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
-import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues} from './conversion';
+import {convertHexToRed, convertHexToGreen, convertHexToBlue, rgbToHex, HextoRGBvalues, checkHighestVal} from './conversion';
+import { isDark, isBright } from './colorTester';
 
 //Used to modify the RGB values
 
@@ -38,6 +39,50 @@ function generateComplementaryColor(hex) {
 
 }
 
+
+
+function generateTertiaryColor(hex) {
+    if (isDark(hex, 100) == true) {
+        if (checkHighestVal(hex) == 1) {
+           return hexAddModifier(hex, 40, 10, 10);
+            
+        } else if (checkHighestVal == 3) {
+            return hexAddModifier(hex, 10, 10, 40);
+            
+        } else {
+            return hexAddModifier(hex, 10, 40, 10);
+            
+        }
+    } else if (isBright(hex, 235) == true) {
+        if (checkHighestVal(hex) == 1) {
+            return hexSubtractModifier(hex, 40, 10, 10);
+           
+        } else if (checkHighestVal == 3) {
+            return hexSubtractModifier(hex, 10, 10, 40);
+            
+        } else {
+            return hexSubtractModifier(hex, 10, 40, 10);
+            
+        }
+    } else if (isDark(hex, 60) == false && isBright(hex, 235) == false ) {
+        var h = generateComplementaryColor(hex);
+        if (checkHighestVal(hex) == 1) {
+            hexAddModifier(h, 40, -10, 10);
+            return generateComplementaryColor(h);
+           
+        } else if (checkHighestVal == 3) {
+            hexAddModifier(h, -10, 10, 40);
+            return generateComplementaryColor(h);
+        } else {
+            hexAddModifier(h, 10, 40, -10);
+            return generateComplementaryColor(h);
+        }
+       
+        
+    }
+    return 0;
+}
+
 /**
  * 
  * @param {*} hex 
@@ -61,5 +106,6 @@ function hexSubtractModifier(hex, amountR, amountG, amountB) {
 export {
     hexAddModifier,
     hexSubtractModifier,
-    generateComplementaryColor
+    generateComplementaryColor,
+    generateTertiaryColor
 };

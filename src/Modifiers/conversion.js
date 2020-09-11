@@ -66,6 +66,20 @@ function convertHexToBlue(hex) {
   return bTotal;
 }
 
+function checkHighestVal(hex) {
+  var r = convertHexToRed(hex);
+  var g = convertHexToGreen(hex);
+  var b = convertHexToBlue(hex);
+
+  if ( Math.max(r, g, b) == r) {
+    return 1;
+  } else if ( Math.max(r, g, b) == g) {
+    return 2;
+  } else if (Math.max(r, g, b) == b) {
+    return 3;
+  }
+}
+
 /*
 @param: hexadecimal value
 @return: decimal value 
@@ -102,5 +116,6 @@ export {
   convertHexToGreen,
   convertHexToBlue,
   rgbToHex,
-  HextoRGBvalues
+  HextoRGBvalues,
+  checkHighestVal
 };
