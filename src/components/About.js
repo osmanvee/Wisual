@@ -2,8 +2,9 @@ import React from 'react';
 
 import '../App.css';
 import '../index.css';
-import { Button, InputGroup, FormControl, Jumbotron, Container, Accordion, Form, Table } from 'react-bootstrap';
-
+import { Button, InputGroup, FormControl, Jumbotron, Container, Accordion, Form, Table, Row, Col, Alert} from 'react-bootstrap';
+import icon1 from '../images/icon2.svg';
+import icon3 from '../images/icon3.svg';
 function About() {
 
     return(
@@ -16,6 +17,28 @@ function About() {
                 </p>
             </Container>
             </Jumbotron>
+    <Container>
+    <Row>
+    <Col> <span id="iconT"> 
+    <img src={icon3} width="90px"/>
+    <h5>Application of Color theory concepts</h5>
+    </span>
+    </Col>
+    <Col>
+    <span id="iconT"> 
+    <img src={icon1} width="90px"/>
+    <h5>Concept UI and code generation using your colors</h5>
+    </span>
+    </Col>
+  
+  </Row>
+  <br/>
+  <Row>
+      <Alert variant="dark">
+          For feedback: osman.warsi@live.com
+      </Alert>
+  </Row>
+    </Container>
         </div>
     );
 }

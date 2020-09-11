@@ -67,15 +67,15 @@ function generateTertiaryColor(hex) {
     } else if (isDark(hex, 60) == false && isBright(hex, 235) == false ) {
         var h = generateComplementaryColor(hex);
         if (checkHighestVal(hex) == 1) {
-            hexAddModifier(h, 40, -10, 10);
-            return generateComplementaryColor(h);
+           
+            return generateComplementaryColor( hexAddModifier(h, 40, -10, 10));
            
         } else if (checkHighestVal == 3) {
-            hexAddModifier(h, -10, 10, 40);
-            return generateComplementaryColor(h);
+           
+            return generateComplementaryColor( hexAddModifier(h, -10, 10, 40));
         } else {
-            hexAddModifier(h, 10, 40, -10);
-            return generateComplementaryColor(h);
+            
+            return generateComplementaryColor(hexAddModifier(h, 10, 40, -10));
         }
        
         
