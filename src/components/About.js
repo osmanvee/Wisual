@@ -34,11 +34,23 @@ function About() {
   </Row>
   <br/>
   <Row>
-      <Alert variant="dark">
-          For feedback: osman.warsi@live.com
-      </Alert>
+    
   </Row>
     </Container>
+    <Jumbotron fluid>
+            <Container>
+                <h1>Feedback:</h1>
+                <p>
+                Please feel free to contact me for feedback
+                </p>
+
+                <Alert variant="primary">
+                    osman.warsi@live.com | 
+                    <a href="https://www.github.com/osmanvee"> Github</a>
+                    <a href="https://www.osman-warsi.com"> | Portfolio</a>
+                </Alert>
+            </Container>
+            </Jumbotron>
         </div>
     );
 }

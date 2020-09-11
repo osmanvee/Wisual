@@ -63,11 +63,11 @@ function App() {
         </Switch>
           
        
-
-        <footer3>
+        <span id="footer"> 
+        <div>
           <p>Wisual 2020 CopyRights</p>
-          
-        </footer3>
+          </div>
+          </span>
       </div>
       
   );
