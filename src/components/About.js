@@ -13,7 +13,7 @@ function About() {
             <Container>
                 <h1>About Wisual</h1>
                 <p>
-                Generating colour palettes using colour manupilations.
+                Generating colour palettes using colour manipulations.
                 </p>
             </Container>
             </Jumbotron>
